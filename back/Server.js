@@ -54,7 +54,7 @@ app.post('/questionario', async (req, res) => {
   const { email, displayName, tipoConta, nomeCompletoUsuario, CPFUsuario, dataNascimentoUsuario, experiencias, conhecimentos } = req.body;
 
   try {
-    const usuarioRef = db.collection('usuarios').doc(email); // Pode ser melhor usar uid ou outro identificador único
+    const usuarioRef = db.collection('usuarios').doc(email); 
     await usuarioRef.set({
       email,
       displayName,
